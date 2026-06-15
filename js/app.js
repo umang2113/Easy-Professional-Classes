@@ -23,7 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
     return studentsData
       .filter(student => {
         // Category Filter
-        const matchesCategory = currentFilter === "all" || student.category === currentFilter;
+        let matchesCategory = false;
+        if (currentFilter === "all") {
+          matchesCategory = true;
+        } else if (student.category) {
+          if (Array.isArray(student.category)) {
+            matchesCategory = student.category.includes(currentFilter);
+          } else {
+            const categories = student.category.split(',').map(c => c.trim().toLowerCase());
+            matchesCategory = categories.includes(currentFilter.toLowerCase());
+          }
+        }
         
         // Search Filter
         const term = searchQuery.toLowerCase();
@@ -68,16 +78,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     students.forEach(student => {
-      const initials = student.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+      const isNextYou = student.id === 12;
+      const initials = isNextYou ? "?" : student.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
       
       const card = document.createElement("div");
-      card.className = "student-card";
+      card.className = `student-card ${isNextYou ? 'next-you-card' : ''}`;
       card.innerHTML = `
         <div class="student-card-glow"></div>
         <div class="student-header">
           <div class="avatar-container">
-            <img src="${student.avatar}" class="student-avatar" alt="${student.name}" onerror="handleImageError(this, '${initials}')" />
-            ${student.rank ? `<div class="rank-badge">${student.rank}</div>` : ''}
+            ${isNextYou ? `
+              <div class="avatar-fallback next-you-avatar">
+                <i class="fas fa-user-plus"></i>
+              </div>
+            ` : `
+              <img src="${student.avatar}" class="student-avatar" alt="${student.name}" onerror="handleImageError(this, '${initials}')" />
+              ${student.rank ? `<div class="rank-badge">${student.rank}</div>` : ''}
+            `}
           </div>
           <div class="student-title">
             <h3 class="student-name">${student.name}</h3>
@@ -140,8 +157,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!testimonialContainer) return;
     testimonialContainer.innerHTML = "";
 
-    // Let's pick 5 students with quotes
-    const featuredStudents = studentsData.slice(0, 5);
+    // Select specific students (including ID 7)
+    const featuredIds = [1, 2, 3, 4, 5, 7];
+    const featuredStudents = studentsData.filter(s => featuredIds.includes(s.id));
 
     featuredStudents.forEach((student, idx) => {
       const slide = document.createElement("div");
