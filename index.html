@@ -25,7 +25,6 @@
         <ul>
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#results-section">Selections</a></li>
-          <li><a href="#qr-section">QR Generator</a></li>
           <li><a href="#contact-section" class="nav-cta">Enroll Now</a></li>
         </ul>
       </nav>
@@ -43,9 +42,6 @@
       <div class="hero-actions">
         <a href="#results-section" class="glow-button">
           <i class="fas fa-trophy"></i> View Student Selections
-        </a>
-        <a href="#qr-section" class="secondary-button">
-          <i class="fas fa-qrcode"></i> Get Banner QR Code
         </a>
       </div>
     </section>
@@ -135,57 +131,6 @@
       </div>
     </section>
 
-    <!-- QR Code Generator Section -->
-    <section class="qr-section" id="qr-section">
-      <div class="qr-box">
-        <div class="qr-info">
-          <h2>Generate QR Code For Banners</h2>
-          <p>
-            Place this QR code on physical advertisements and banners. When prospective students scan the QR code with their mobile devices, they will be redirected instantly to this selection website to browse the full achievements list.
-          </p>
-          
-          <div class="qr-config-form">
-            <div class="form-group">
-              <label for="qr-url-input">Target Website URL</label>
-              <input type="text" id="qr-url-input" class="form-input" placeholder="e.g. https://easyprofessionalclasses.com">
-            </div>
-            <button id="refresh-qr-btn" class="glow-button" style="align-self: flex-start; padding: 10px 22px; font-size: 0.9rem;">
-              <i class="fas fa-sync-alt"></i> Update QR Code
-            </button>
-          </div>
-
-          <!-- Banner mockup layout -->
-          <div class="banner-preview-box">
-            <div class="banner-preview-title">
-              <i class="fas fa-eye"></i> Banner Mockup Preview (Physical Banner layout)
-            </div>
-            <div class="banner-mockup">
-              <div class="banner-content">
-                <div class="banner-brand">EASY PROFESSIONAL CLASSES</div>
-                <div class="banner-main-text">MCA SELECTIONS 2025</div>
-                <div class="banner-sub-text">Scan QR Code to view all student results & ranks</div>
-              </div>
-              <div class="banner-qr-place">
-                <img id="banner-qr-img" src="" alt="Banner QR Code">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="qr-display-container">
-          <div class="qr-canvas-holder">
-            <canvas id="qr-canvas"></canvas>
-          </div>
-          <h3 style="margin-bottom: 8px; font-family: var(--font-display);">Download QR Image</h3>
-          <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 20px;">
-            High-contrast, high-resolution PNG file suitable for graphic design and flex printing.
-          </p>
-          <a id="qr-download" href="#" download="easy_professional_classes_qr.png" class="qr-download-btn">
-            <i class="fas fa-download"></i> Download PNG
-          </a>
-        </div>
-      </div>
-    </section>
 
     <!-- Enquiry Contact Form Section -->
     <section class="contact-section" id="contact-section">
@@ -275,8 +220,7 @@
     </div>
   </div>
 
-  <!-- QR Code Generator Library -->
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+
   <!-- Student Database Data -->
   <script src="js/students.js"></script>
   <!-- Main Logic -->

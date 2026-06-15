@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search-input");
   const tabButtons = document.querySelectorAll(".tab-btn");
   const sortSelect = document.getElementById("sort-select");
-  const qrUrlInput = document.getElementById("qr-url-input");
-  const refreshQrBtn = document.getElementById("refresh-qr-btn");
   const testimonialContainer = document.getElementById("testimonial-slides-container");
   const prevBtn = document.querySelector(".carousel-btn-prev");
   const nextBtn = document.querySelector(".carousel-btn-next");
@@ -209,54 +207,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // QR Code Generation
-  function generateQR() {
-    const canvas = document.getElementById("qr-canvas");
-    const downloadBtn = document.getElementById("qr-download");
-    if (!canvas || !qrUrlInput) return;
-
-    const targetUrl = qrUrlInput.value.trim() || window.location.href;
-
-    // Use official qrcode library
-    if (typeof QRCode !== "undefined") {
-      QRCode.toCanvas(canvas, targetUrl, {
-        width: 240,
-        margin: 1.5,
-        color: {
-          dark: "#08090d",  // Premium dark
-          light: "#ffffff"  // High contrast white background
-        }
-      }, function (error) {
-        if (error) {
-          console.error("QR Code Error:", error);
-          return;
-        }
-        // Set download links
-        const dataUrl = canvas.toDataURL("image/png");
-        downloadBtn.href = dataUrl;
-        
-        // Update live banner preview image
-        const bannerQr = document.getElementById("banner-qr-img");
-        if (bannerQr) {
-          bannerQr.src = dataUrl;
-        }
-      });
-    } else {
-      console.warn("QRCode library is not loaded yet.");
-    }
-  }
-
-  if (refreshQrBtn) {
-    refreshQrBtn.addEventListener("click", generateQR);
-  }
-
-  if (qrUrlInput) {
-    qrUrlInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        generateQR();
-      }
-    });
-  }
 
   // Quote Modal Functionality
   window.openQuoteModal = function(studentId) {
@@ -346,25 +296,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+
   // Initialize App
   renderStudentsGrid();
   buildTestimonials();
   startTestimonialTimer();
-
-  // Wait for QRCode script load
-  let checkQrCount = 0;
-  function tryInitQR() {
-    if (typeof QRCode !== "undefined") {
-      // Setup default QR URL to current hostname or mock website
-      if (qrUrlInput) {
-        qrUrlInput.value = window.location.origin + window.location.pathname;
-      }
-      generateQR();
-    } else if (checkQrCount < 30) {
-      checkQrCount++;
-      setTimeout(tryInitQR, 100);
-    }
-  }
-  
-  tryInitQR();
 });
