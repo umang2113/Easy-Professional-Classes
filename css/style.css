@@ -1339,3 +1339,288 @@ footer {
   color: var(--text-primary);
   font-style: italic;
 }
+
+/* ==========================================================================
+   Responsive Utilities (Flawless Responsive Design on Mobile/Tablet/Desktop)
+   ========================================================================== */
+
+/* Mobile Phones (max-width: 600px) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 12px;
+  }
+  
+  nav ul {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav a {
+    font-size: 0.9rem;
+  }
+  
+  .nav-cta {
+    padding: 6px 14px;
+  }
+  
+  .hero {
+    padding: 50px 16px 40px 16px;
+  }
+  
+  .hero-tag {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    margin-bottom: 16px;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .glow-button, 
+  .secondary-button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+  
+  .stats-container {
+    padding: 0 16px 40px 16px;
+  }
+  
+  .stat-card {
+    padding: 24px 16px;
+    border-radius: 20px;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  
+  .results-portal {
+    padding: 40px 16px;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .filter-bar {
+    padding: 16px;
+    border-radius: 20px;
+  }
+  
+  /* Horizontal scrolling filter tabs styling */
+  .tabs-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    padding-bottom: 4px;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .tabs-wrapper::-webkit-scrollbar {
+    display: none; /* WebKit */
+  }
+  
+  .tab-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .students-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .student-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .avatar-container {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .student-name {
+    font-size: 1.1rem;
+  }
+  
+  .exam-tag {
+    font-size: 0.68rem;
+    padding: 1.5px 6px;
+  }
+  
+  .selection-value {
+    font-size: 0.9rem;
+  }
+  
+  .student-quote {
+    font-size: 0.82rem;
+    margin-top: 12px;
+  }
+  
+  .testimonials-section {
+    padding: 50px 16px;
+  }
+  
+  .testimonial-text {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .qr-section {
+    padding: 40px 16px;
+  }
+  
+  .qr-box {
+    padding: 24px 16px;
+    border-radius: 24px;
+    gap: 24px;
+  }
+  
+  .qr-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .banner-mockup {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  .banner-content {
+    width: 100%;
+  }
+  
+  .banner-qr-place {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .qr-display-container {
+    padding: 20px 12px;
+    border-radius: 20px;
+  }
+  
+  .qr-canvas-holder {
+    padding: 12px;
+    border-radius: 14px;
+  }
+  
+  .contact-section {
+    padding: 40px 16px;
+  }
+  
+  .contact-card {
+    padding: 24px 16px;
+    border-radius: 24px;
+  }
+  
+  .contact-header h2 {
+    font-size: 1.7rem;
+  }
+  
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .info-item {
+    gap: 12px;
+  }
+  
+  .info-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .info-details p {
+    font-size: 0.95rem;
+  }
+  
+  .modal-content {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+  
+  .modal-avatar {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .modal-name {
+    font-size: 1.25rem;
+  }
+  
+  .modal-quote {
+    font-size: 0.95rem;
+  }
+}
+
+/* Medium Screens (Tablets / min-width: 601px and max-width: 992px) */
+@media (min-width: 601px) and (max-width: 992px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .students-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .qr-box {
+    grid-template-columns: 1fr;
+    padding: 36px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Extra Large Screens (Desktops / min-width: 1200px) */
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+  
+  .students-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
