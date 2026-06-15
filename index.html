@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCA Selections & Results | Easy Professional Classes</title>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Easy Professional Classes MCA results and selected students list. Scan QR code on our banners to explore NIMCET and CUET selections at top NITs and central universities.">
+  <meta name="keywords" content="Easy Professional Classes, NIMCET Selections, CUET MCA, MCA results, selected student portal, NIT Trichy, JNU, BHU, DU">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="navbar">
+      <a href="#" class="logo" id="nav-logo">
+        <div class="logo-icon">E</div>
+        <div class="logo-text">Easy <span>Professional</span></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#results-section">Selections</a></li>
+          <li><a href="#qr-section">QR Generator</a></li>
+          <li><a href="#contact-section" class="nav-cta">Enroll Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-tag">MCA Selections</div>
+      <h1 class="gradient-text">Cracking NIMCET, CUET MCA/MBA & Others With Pride</h1>
+      <p class="hero-subtitle">
+        We are thrilled to celebrate the outstanding success of our students. Scan the QR code on our banner to view our official selections at prestigious NITs and Central Universities.
+      </p>
+      <div class="hero-actions">
+        <a href="#results-section" class="glow-button">
+          <i class="fas fa-trophy"></i> View Student Selections
+        </a>
+        <a href="#qr-section" class="secondary-button">
+          <i class="fas fa-qrcode"></i> Get Banner QR Code
+        </a>
+      </div>
+    </section>
+
+    <!-- Stats Dashboard Section -->
+    <section class="stats-container">
+      <div class="stats-grid">
+        <!-- Stat 1 -->
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+          <div class="stat-number gradient-text">50+</div>
+          <div class="stat-label">Total MCA Selections</div>
+        </div>
+        <!-- Stat 2 -->
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-award"></i></div>
+          <div class="stat-number gradient-gold-text">AIR 05</div>
+          <div class="stat-label">Top CUET Rank</div>
+        </div>
+        <!-- Stat 3 -->
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-university"></i></div>
+          <div class="stat-number gradient-text">15+</div>
+          <div class="stat-label">Partner Universities</div>
+        </div>
+        <!-- Stat 4 -->
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-star"></i></div>
+          <div class="stat-number gradient-gold-text">98%</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Showcase Portal Section -->
+    <section class="results-portal" id="results-section">
+      <div class="section-header">
+        <h2>Selected Students & Ranks</h2>
+        <p>Browse through our students who secured seats in top institutions across India</p>
+      </div>
+
+      <!-- Search, Filter & Sort Panel -->
+      <div class="filter-bar">
+        <!-- Search Input -->
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search-input" class="search-input" placeholder="Search by name, university, rank...">
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="tabs-wrapper">
+          <button class="tab-btn active" data-filter="all">All Selections</button>
+          <button class="tab-btn" data-filter="nit">NITs (NIMCET)</button>
+          <button class="tab-btn" data-filter="central">Central Universities</button>
+          <button class="tab-btn" data-filter="state">State Institutions</button>
+        </div>
+
+        <!-- Sort Select -->
+        <div class="sort-wrapper">
+          <label for="sort-select">Sort By:</label>
+          <select id="sort-select" class="sort-select">
+            <option value="rank">Rank (High to Low)</option>
+            <option value="name-asc">Name (A - Z)</option>
+            <option value="name-desc">Name (Z - A)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Students Grid Container -->
+      <div class="students-grid" id="students-grid">
+        <!-- Dynamically rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section class="testimonials-section">
+      <div class="section-header">
+        <h2>Student Journeys</h2>
+        <p>Hear how Easy Professional Classes paved their way to top MCA institutions</p>
+      </div>
+      <div class="testimonials-carousel">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Previous Testimonial"><i class="fas fa-chevron-left"></i></button>
+        <div class="testimonial-slides" id="testimonial-slides-container">
+          <!-- Dynamically rendered via JS -->
+        </div>
+        <button class="carousel-btn carousel-btn-next" aria-label="Next Testimonial"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <!-- QR Code Generator Section -->
+    <section class="qr-section" id="qr-section">
+      <div class="qr-box">
+        <div class="qr-info">
+          <h2>Generate QR Code For Banners</h2>
+          <p>
+            Place this QR code on physical advertisements and banners. When prospective students scan the QR code with their mobile devices, they will be redirected instantly to this selection website to browse the full achievements list.
+          </p>
+          
+          <div class="qr-config-form">
+            <div class="form-group">
+              <label for="qr-url-input">Target Website URL</label>
+              <input type="text" id="qr-url-input" class="form-input" placeholder="e.g. https://easyprofessionalclasses.com">
+            </div>
+            <button id="refresh-qr-btn" class="glow-button" style="align-self: flex-start; padding: 10px 22px; font-size: 0.9rem;">
+              <i class="fas fa-sync-alt"></i> Update QR Code
+            </button>
+          </div>
+
+          <!-- Banner mockup layout -->
+          <div class="banner-preview-box">
+            <div class="banner-preview-title">
+              <i class="fas fa-eye"></i> Banner Mockup Preview (Physical Banner layout)
+            </div>
+            <div class="banner-mockup">
+              <div class="banner-content">
+                <div class="banner-brand">EASY PROFESSIONAL CLASSES</div>
+                <div class="banner-main-text">MCA SELECTIONS 2025</div>
+                <div class="banner-sub-text">Scan QR Code to view all student results & ranks</div>
+              </div>
+              <div class="banner-qr-place">
+                <img id="banner-qr-img" src="" alt="Banner QR Code">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qr-display-container">
+          <div class="qr-canvas-holder">
+            <canvas id="qr-canvas"></canvas>
+          </div>
+          <h3 style="margin-bottom: 8px; font-family: var(--font-display);">Download QR Image</h3>
+          <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 20px;">
+            High-contrast, high-resolution PNG file suitable for graphic design and flex printing.
+          </p>
+          <a id="qr-download" href="#" download="easy_professional_classes_qr.png" class="qr-download-btn">
+            <i class="fas fa-download"></i> Download PNG
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enquiry Contact Form Section -->
+    <section class="contact-section" id="contact-section">
+      <div class="contact-card">
+        <div class="contact-header">
+          <h2>Kickstart Your MCA Journey</h2>
+          <p>Ready to join the next batch at Easy Professional Classes? Leave a message or contact us directly.</p>
+        </div>
+        <div class="contact-grid">
+          <!-- Form -->
+          <form class="contact-form" id="enquiry-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" class="form-input" required placeholder="e.g. Aman Gupta">
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" class="form-input" required placeholder="e.g. +91 9876543210">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. aman@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="contact-msg">Your Message/Query</label>
+              <textarea id="contact-msg" class="form-textarea" placeholder="Which exam are you targeting (NIMCET/CUET)? Tell us how we can help."></textarea>
+            </div>
+            <button type="submit" class="glow-button" style="justify-content: center; margin-top: 10px;">
+              <i class="fab fa-whatsapp"></i> Send Inquiry via WhatsApp
+            </button>
+          </form>
+
+          <!-- Contact Details -->
+          <div class="contact-info-panel">
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="info-details">
+                <h4>Call Support</h4>
+                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div class="info-details">
+                <h4>Email Enquiry</h4>
+                <p><a href="mailto:info@easyprofessionalclasses.com">info@easyprofessionalclasses.com</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="info-details">
+                <h4>Our Location</h4>
+                <p>Kapurthala Crossing, Lucknow, UP - 226024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-copy">
+        &copy; 2026 Easy Professional Classes. All Rights Reserved. Created for MCA Aspirants.
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Dialog for Expanded Quotes -->
+  <div class="modal" id="quote-modal">
+    <div class="modal-content">
+      <button class="close-modal-btn" id="close-modal" aria-label="Close Popup"><i class="fas fa-times"></i></button>
+      <div id="modal-avatar-container"></div>
+      <h3 class="modal-name" id="modal-name">Student Name</h3>
+      <div class="modal-university" id="modal-university">Selected in NIMCET 2025</div>
+      <p class="modal-quote" id="modal-quote">"Testimonial quote goes here"</p>
+    </div>
+  </div>
+
+  <!-- QR Code Generator Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+  <!-- Student Database Data -->
+  <script src="js/students.js"></script>
+  <!-- Main Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
